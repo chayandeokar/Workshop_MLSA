@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Always gives new Service Token
+
 GRAFANA_URL="http://a34b78cb3f16341ce9aad5788674227a-1606254003.us-east-1.elb.amazonaws.com/api/dashboards/db"
 SERVICE_ACCOUNT_TOKEN="glsa_NtgwDPMuj4cIkDma6hGQDNpZVT5RnJtT_fa7b950d"
 PROMETHEUS_UID="aa754dbe1cff84abab3e2554677de347-1836917625.us-east-1.elb.amazonaws.com"  # Replace with your Prometheus datasource UID
