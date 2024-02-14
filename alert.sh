@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# How to write Shell Script
 # Define the new scrape configuration
 NEW_SCRAPE_CONFIG=$(cat <<EOF
   - job_name: 'dcgm-exporter'
@@ -19,6 +20,7 @@ if [ -z "$CURRENT_CM_DATA" ]; then
   kubectl create configmap prometheus-server --from-literal=prometheus.yml="$NEW_SCRAPE_CONFIG"
 else
   # Append the new scrape configuration after the existing one
+
   UPDATED_CM_DATA=$(echo -e "$CURRENT_CM_DATA\n$NEW_SCRAPE_CONFIG")
 
   # Create a temporary file with the updated ConfigMap data
